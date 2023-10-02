@@ -6,7 +6,6 @@ from pathlib import Path
 
 import torch
 
-
 from boxmot import TRACKERS
 from boxmot.tracker_zoo import create_tracker
 from boxmot.utils import ROOT, WEIGHTS
@@ -21,6 +20,7 @@ from ultralytics.data.utils import VID_FORMATS
 from ultralytics.utils.plotting import save_one_box
 
 from examples.utils import write_mot_results
+
 
 
 def on_predict_start(predictor, persist=False):
