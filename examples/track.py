@@ -25,7 +25,7 @@ from examples.utils import write_mot_results
 import os
 import sys
 script_dir = os.path.dirname(os.path.abspath(__file__))
-parent_dir = os.path.abspath(os.path.join(script_dir, '../../..'))
+parent_dir = os.path.abspath(os.path.join(script_dir, '../../'))
 sys.path.append(parent_dir)
 import pdb; pdb.set_trace()
 from utilsVerify import *
