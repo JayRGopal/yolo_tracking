@@ -108,6 +108,10 @@ def run(args):
     # store custom args in predictor
     yolo.predictor.custom_args = args
 
+    # variables for verification with tracking
+    verified = False
+    track_now = -1
+
     for frame_idx, r in enumerate(results):
 
 
