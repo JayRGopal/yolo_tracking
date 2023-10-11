@@ -21,6 +21,13 @@ from ultralytics.utils.plotting import save_one_box
 
 from examples.utils import write_mot_results
 
+# Verify
+import os
+import sys
+script_dir = os.path.dirname(os.path.abspath(__file__))
+parent_dir = os.path.abspath(os.path.join(script_dir, '../../..'))
+sys.path.append(parent_dir)
+from utilsVerify import *
 
 
 def on_predict_start(predictor, persist=False):
@@ -102,6 +109,9 @@ def run(args):
     yolo.predictor.custom_args = args
 
     for frame_idx, r in enumerate(results):
+
+
+        # ADD VERIFY HERE!
 
         if r.boxes.data.shape[1] == 7:
 
