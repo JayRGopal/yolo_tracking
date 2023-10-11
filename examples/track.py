@@ -111,10 +111,10 @@ def run(args):
     # variables for verification with tracking
     verified = False
     track_now = -1
-    
+
     for frame_idx, r in enumerate(results):
 
-        import pdb; pdb.set_trace()
+        #import pdb; pdb.set_trace()
         # ADD VERIFY HERE!
 
         if r.boxes.data.shape[1] == 7:
