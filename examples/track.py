@@ -96,7 +96,8 @@ def run(args):
         args.yolo_model if 'yolov8' in str(args.yolo_model) else 'yolov8n.pt',
     )
 
-    real_name = args.source.split('/')[-1]
+
+    real_name = os.path.basename(args.source)
     outputs_folder = os.path.join(args.project, real_name)
     if os.path.exists(outputs_folder):
         shutil.rmtree(outputs_folder)
