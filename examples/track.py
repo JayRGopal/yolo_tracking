@@ -179,6 +179,8 @@ def run(args):
                 else:
                     success = 0
                     tensor_values = [frame_idx, timestep_now, success] + [0] * (len(COLUMN_LABELS) - 3)
+                    writer.writerow(tensor_values)
+                    print(f'Wrote row to {output_csv_path}')
                     break
 
             if r.boxes.data.shape[1] == 7:
