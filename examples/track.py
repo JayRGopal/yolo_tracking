@@ -160,8 +160,8 @@ def run(args):
                 timestep_now = args.vid_stride * (frame_idx / args.vid_fps)
             success = 1
 
-            kp_now = r.keypoints.numpy().data
-            boxes_now = r.boxes.numpy().data
+            kp_now = r.keypoints.cpu().numpy().data
+            boxes_now = r.boxes.cpu().numpy().data
             num_ppl = kp_now.shape[0]
             for person_id in range(num_ppl):
                 # TODO: Add verification here
